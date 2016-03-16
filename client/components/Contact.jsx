@@ -30,7 +30,7 @@ export default class Contact extends React.Component {
 							<div className="row">
 								<div className="col s12">
 									<select>
-										<option value="I need a quick quote!" selected>I need a quick quote!</option>
+										<option defaultValue="I need a quick quote!">I need a quick quote!</option>
 										<option value="I have more questions!">I have more questions!</option>
 									</select>
 								</div>
