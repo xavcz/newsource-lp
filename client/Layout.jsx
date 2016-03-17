@@ -1,35 +1,23 @@
 import React from 'react';
-import Dropdown from './components/Dropdown.jsx';
-import Nav from './components/Nav.jsx';
-import Hero from './components/Hero.jsx';
-import BigText from './components/BigText.jsx';
-import MoreGrid from './components/MoreGrid.jsx';
-import Pricing from './components/Pricing.jsx';
-import Faq from './components/Faq.jsx';
-import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
+import Header from './components/Header.jsx';
+import Startup42 from './components/Startup42.jsx';
+import Details from './components/Details.jsx';
+import ActionRepeat from './components/ActionRepeat.jsx';
+import Testimonials from './components/Testimonials.jsx';
 
 export default class Layout extends React.Component {
 	render() {
 		return (
 			<div>
-				<Dropdown />
+				<Header />
 
-				<Nav />
+				<Startup42 />
 
-				<Hero />
+				<Details />
 
-				<BigText />
+				<ActionRepeat />
 
-				<MoreGrid />
-
-				<Pricing />
-
-				<Faq />
-
-				<Contact />
-
-				<Footer />
+				<Testimonials />
 			</div>
 		);
 	}
