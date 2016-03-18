@@ -55,9 +55,9 @@ export default class CallToAction extends TrackerReact(React.Component) {
 
 		data.set('step', 3);
 
-		Meteor.call('Reports.method.assignReport', user, (err, res) => {
+		Meteor.call('Reports.methods.assignReport', user, (err, res) => {
 			if (err) {
-				data.set('step', 3);
+				data.set('step', 2);
 				throw new Meteor.Error(err);
 			}
 		});
