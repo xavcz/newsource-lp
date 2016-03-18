@@ -8,6 +8,7 @@ import Report from './components/Report.jsx';
 import Email from './components/Email.jsx';
 import Thanks from './components/Thanks.jsx';
 
+// Not the best way to do it!
 const data = new ReactiveDict('data');
 data.setDefault('step', 1);
 data.setDefault('report', {});
@@ -31,6 +32,8 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		 	problem: event.currentTarget[0].value.trim()
 		};
 
+		analytics.track("Submit report", report);
+
 		// UI step change
 		data.set('step', 2);
 
@@ -38,6 +41,11 @@ export default class CallToAction extends TrackerReact(React.Component) {
 			if (err) {
 				//this.state.errors.submit = 'Une erreur est arrivée, merci de ré-essayer!';
 				data.set('step', 1);
+
+				analytics.track("Error", {
+					event: "Submit report"
+				});
+
 				throw new Meteor.Error(error);
 			}
 
@@ -48,15 +56,22 @@ export default class CallToAction extends TrackerReact(React.Component) {
 
 	submitEmail (event) {
 		event.preventDefault();
+
 		const user = {
 			email: event.currentTarget[0].value.trim(),
 			reportId: data.get('report')._id
 		};
 
+		analytics.track("Assign report", user);
+
 		data.set('step', 3);
 
 		Meteor.call('Reports.methods.assignReport', user, (err, res) => {
 			if (err) {
+				analytics.track("Error", {
+					event: "Assign report"
+				});
+
 				data.set('step', 2);
 				throw new Meteor.Error(err);
 			}

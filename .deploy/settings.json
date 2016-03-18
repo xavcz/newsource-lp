@@ -1,5 +1,10 @@
 {
   "public": {
-
+    "analyticsSettings": {
+      "Mixpanel": {
+        "token": "a4aa11ad71057200ae5d09ffc18c61ad",
+        "people": false
+      }
+    }
   }
 }

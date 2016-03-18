@@ -1,5 +1,5 @@
 import React from 'react';
-import CallToAction from '../CTA/CTA-Container.jsx';
+import CallToAction from '../CTA/CallToAction.jsx';
 
 export default class ActionRepeat extends React.Component {
 	render () {

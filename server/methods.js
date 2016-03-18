@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import { ValidatedMethod } from 'meteor/mdg:validated-method';
 
-import Reports from './collections';
+import Reports from '../lib/collections';
 
 Reports.methods = {};
 
@@ -10,10 +10,6 @@ Reports.methods.createReport = new ValidatedMethod({
 	name: 'Reports.methods.createReport',
 	validate: Reports.schema.validator(),
 	run (report) {
-		if (Meteor.isClient) {
-			// XXX analytics
-		}
-
 		return Reports.insert(report);
 	}
 });
@@ -25,20 +21,14 @@ Reports.methods.assignReport = new ValidatedMethod({
 		reportId: { type: String }
 	}).validator(),
 	run ({ email, reportId }) {
-		if (Meteor.isClient) {
-			// XXX analytics
-		}
+		const userId = Accounts.createUser({
+			email,
+			profile: { reportId }
+		});
 
-		if (Meteor.isServer) {
-			const userId = Accounts.createUser({
-				email,
-				profile: { reportId }
-			});
-
-			Meteor.defer(function () {
-				return Accounts.sendEnrollmentEmail(userId);
-			});
-		}
+		Meteor.defer(function () {
+			return Accounts.sendEnrollmentEmail(userId);
+		});
 	}
 });
 
