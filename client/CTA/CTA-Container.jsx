@@ -1,7 +1,7 @@
 import React from 'react';
-import Report from './Report.jsx';
-import Email from './Email.jsx';
-import Thanks from './Thanks.jsx';
+import Report from './components/Report.jsx';
+import Email from './components/Email.jsx';
+import Thanks from './components/Thanks.jsx';
 
 export default class CallToAction extends React.Component {
 
@@ -30,7 +30,7 @@ export default class CallToAction extends React.Component {
 	render () {
 		return (
 			<div>
-				<Report />
+				<Report action={this.submitReport} />
 			</div>
 		);
 	}
