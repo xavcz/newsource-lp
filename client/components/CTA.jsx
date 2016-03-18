@@ -5,7 +5,7 @@ export default class CTA extends React.Component {
 	// needed with ES6 way (class .. extends)
 	constructor (props) {
 		super(props);
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.submitReport = this.submitReport.bind(this);
 	}
 
 	submitReport (event) {
