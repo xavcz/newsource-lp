@@ -1,5 +1,5 @@
 import React from 'react';
-import CTA from './CTA.jsx';
+import CallToAction from './CTA/CTA-Container.jsx';
 
 export default class ActionRepeat extends React.Component {
 	render () {
@@ -8,7 +8,7 @@ export default class ActionRepeat extends React.Component {
 				<div className="container">
 					<div className="row">
 						<h2 className="center text-secondary-color">Dis nous tout !</h2>
-						<CTA />
+						<CallToAction />
 					</div>
 				</div>
 			</div>

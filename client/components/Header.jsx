@@ -1,5 +1,5 @@
 import React from 'react';
-import CTA from './CTA.jsx';
+import CallToAction from './CTA/CTA-Container.jsx';
 
 export default class Header extends React.Component {
 	render() {
@@ -14,7 +14,7 @@ export default class Header extends React.Component {
 							<h5 className="header">A partir de l'état actuel de ton projet, nous t'apportons des solutions qui poussent à l'action.</h5>
 						</div>
 						<div className="col s12 m5">
-							<CTA />
+							<CallToAction />
 						</div>
 					</div>
 				</div>

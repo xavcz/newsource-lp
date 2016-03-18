@@ -1,28 +1,6 @@
 import React from 'react';
 
-export default class CTA extends React.Component {
-
-	// needed with ES6 way (class .. extends)
-	constructor (props) {
-		super(props);
-		this.submitReport = this.submitReport.bind(this);
-	}
-
-	submitReport (event) {
-		event.preventDefault();
-
-		const report = {
-			currentStatus: this.refs.currentStatus.value.trim(),
-			context: this.refs.context.value.trim(),
-		 	problem: this.refs.problem.value.trim()
-		};
-
-		// XXX send to method
-
-		this.refs.currentStatus.value = '';
-		this.refs.context.value = '';
-		this.refs.problem.value = '';
-	}
+export default class Report extends React.Component {
 
 	render () {
 		return (
