@@ -11,13 +11,13 @@ export default class Layout extends React.Component {
 			<div>
 				<Header />
 
-				<Startup42 />
-
 				<Details />
 
 				<ActionRepeat />
 
 				<Testimonials />
+
+				<Startup42 />
 			</div>
 		);
 	}
