@@ -258,3 +258,9 @@ nav {
     text-align: center;
     color: white;
 }
+
+.section__more-grid img {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    padding: 10px;
+}
