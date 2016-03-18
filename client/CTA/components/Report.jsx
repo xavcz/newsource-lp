@@ -4,7 +4,7 @@ export default class Report extends React.Component {
 
 	render () {
 		return (
-			<form className="card z-depth-3" id="form-report" onSubmit={this.props.submit}>
+			<form className="card z-depth-3" id="form-report" onSubmit={this.props.onSubmit}>
 				<div className="row">
 					<h4 className="center">Title Call To Action</h4>
 					<div className="input-field | col s12">

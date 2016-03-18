@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+import { ReactiveDict } from 'meteor/reactive-dict';
 import React from 'react';
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
@@ -9,7 +11,7 @@ import Thanks from './components/Thanks.jsx';
 const data = new ReactiveDict('data');
 data.setDefault('step', 1);
 data.setDefault('report', {});
-data.setDefault('email', '');
+data.setDefault('errors', {});
 
 export default class CallToAction extends TrackerReact(React.Component) {
 
@@ -29,25 +31,36 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		 	problem: event.currentTarget[0].value.trim()
 		};
 
-		// XXX send to method
-
-		data.set('report', report);
+		// UI step change
 		data.set('step', 2);
-	}
 
-	fillingErrors () {
-		return this.errors = {};
+		Meteor.call('Reports.methods.createReport', report, (err, res) => {
+			if (err) {
+				//this.state.errors.submit = 'Une erreur est arrivée, merci de ré-essayer!';
+				data.set('step', 1);
+				throw new Meteor.Error(error);
+			}
+
+			_.extend(report, {_id: res});
+			data.set('report', report);
+		});
 	}
 
 	submitEmail (event) {
 		event.preventDefault();
+		const user = {
+			email: event.currentTarget[0].value.trim(),
+			reportId: data.get('report')._id
+		};
 
-		data.set('email', event.currentTarget[0].value.trim());
 		data.set('step', 3);
-	}
 
-	oAuth (service) {
-
+		Meteor.call('Reports.method.assignReport', user, (err, res) => {
+			if (err) {
+				data.set('step', 3);
+				throw new Meteor.Error(err);
+			}
+		});
 	}
 
 	render () {
@@ -55,9 +68,9 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		return (
 			<div>
 				{data.get('step') === 1 ?
-					<Report submit={this.submitReport} errors={this.errors} />
+					<Report onSubmit={this.submitReport} /*errors={this.state.errors}*/ />
 					: data.get('step') === 2 ?
-						<Email submit={this.submitEmail} oauth={this.oAuth} />
+						<Email onSubmit={this.submitEmail} oauth={this.oAuth} />
 						: <Thanks />
 				}
 			</div>

@@ -22,8 +22,6 @@ aldeed:collection2
 mdg:validated-method
 reactive-dict
 ultimatejs:tracker-react
-accounts-ui
-accounts-twitter
-accounts-facebook
 fortawesome:fontawesome
-pauli:accounts-linkedin
+accounts-base
+accounts-password
