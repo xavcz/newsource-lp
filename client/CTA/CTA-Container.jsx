@@ -1,36 +1,57 @@
 import React from 'react';
+
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
+
 import Report from './components/Report.jsx';
 import Email from './components/Email.jsx';
 import Thanks from './components/Thanks.jsx';
 
-export default class CallToAction extends React.Component {
+const data = new ReactiveDict('data');
+data.setDefault('step', 1);
+data.setDefault('report', {});
+data.setDefault('email', '');
+
+export default class CallToAction extends TrackerReact(React.Component) {
 
 	// needed with ES6 way (class .. extends)
 	constructor (props) {
 		super(props);
 		this.submitReport = this.submitReport.bind(this);
+		this.submitEmail = this.submitEmail.bind(this);
 	}
 
 	submitReport (event) {
 		event.preventDefault();
 
 		const report = {
-			currentStatus: this.refs.currentStatus.value.trim(),
-			context: this.refs.context.value.trim(),
-		 	problem: this.refs.problem.value.trim()
+			currentStatus: event.currentTarget[0].value.trim(),
+			context: event.currentTarget[0].value.trim(),
+		 	problem: event.currentTarget[0].value.trim()
 		};
 
 		// XXX send to method
 
-		this.refs.currentStatus.value = '';
-		this.refs.context.value = '';
-		this.refs.problem.value = '';
+		data.set('report', report);
+		data.set('step', 2);
+	}
+
+	submitEmail (event) {
+		event.preventDefault();
+
+		data.set('email', event.currentTarget[0].value.trim());
+		data.set('step', 3);
 	}
 
 	render () {
+
 		return (
 			<div>
-				<Report action={this.submitReport} />
+				{data.get('step') === 1 ?
+					<Report action={this.submitReport} />
+					: data.get('step') === 2 ?
+						<Email action={this.submitEmail} />
+						: <Thanks />
+				}
 			</div>
 		);
 	}
