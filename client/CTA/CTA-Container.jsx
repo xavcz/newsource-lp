@@ -35,6 +35,10 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		data.set('step', 2);
 	}
 
+	fillingErrors () {
+		return this.errors = {};
+	}
+
 	submitEmail (event) {
 		event.preventDefault();
 
@@ -42,14 +46,18 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		data.set('step', 3);
 	}
 
+	oAuth (service) {
+
+	}
+
 	render () {
 
 		return (
 			<div>
 				{data.get('step') === 1 ?
-					<Report action={this.submitReport} />
+					<Report submit={this.submitReport} errors={this.errors} />
 					: data.get('step') === 2 ?
-						<Email action={this.submitEmail} />
+						<Email submit={this.submitEmail} oauth={this.oAuth} />
 						: <Thanks />
 				}
 			</div>
