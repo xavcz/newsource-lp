@@ -3,6 +3,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import React from 'react';
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import { analytics } from 'meteor/okgrow:analytics';
 
 import Report from './components/Report.jsx';
 import Email from './components/Email.jsx';
@@ -15,7 +16,6 @@ data.setDefault('report', {});
 data.setDefault('errors', {});
 
 export default class CallToAction extends TrackerReact(React.Component) {
-
 	// needed with ES6 way (class .. extends)
 	constructor (props) {
 		super(props);
@@ -79,7 +79,6 @@ export default class CallToAction extends TrackerReact(React.Component) {
 	}
 
 	render () {
-
 		return (
 			<div>
 				{data.get('step') === 1 ?
