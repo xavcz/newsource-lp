@@ -16,10 +16,10 @@ FlowRouter.route("/", {
       content: (
         <div>
           <Header />
+          <Testimonials />
           <Details />
           <Startup42 />
           <ActionRepeat />
-          <Testimonials />
         </div>
       )
     });
