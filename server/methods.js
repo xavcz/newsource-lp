@@ -23,11 +23,8 @@ Reports.methods.assignReport = new ValidatedMethod({
 	run ({ email, reportId }) {
 		const userId = Accounts.createUser({
 			email,
+			password: '',
 			profile: { reportId }
-		});
-
-		Meteor.defer(function () {
-			return Accounts.sendEnrollmentEmail(userId);
 		});
 	}
 });
