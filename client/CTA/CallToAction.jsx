@@ -3,7 +3,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import React from 'react';
 
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
-import { analytics } from 'meteor/okgrow:analytics';
+//import { analytics } from 'meteor/okgrow:analytics';
 
 import Report from './components/Report.jsx';
 import Email from './components/Email.jsx';

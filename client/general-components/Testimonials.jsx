@@ -3,7 +3,7 @@ import React from 'react';
 export default class Testimonials extends React.Component {
 	render() {
 		return (
-			<div class="section">
+			<div className="section">
 				<div className="container valign">
 					<div className="row">
 						<h2 className="center text-secondary-color">Témoignages de startupers ayant appliqué cette méthode</h2>

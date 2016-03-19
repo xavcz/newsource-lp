@@ -1,5 +1,5 @@
 import React from 'react';
-import { analytics } from 'meteor/okgrow:analytics';
+//import { analytics } from 'meteor/okgrow:analytics';
 
 
 export default Layout = ({content}) => {
