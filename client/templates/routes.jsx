@@ -4,11 +4,11 @@ import { mount } from 'react-mounter';
 
 import Layout from './Layout.jsx';
 
-import Header from './general-components/Header.jsx';
-import Startup42 from './general-components/Startup42.jsx';
-import Details from './general-components/Details.jsx';
-import ActionRepeat from './general-components/ActionRepeat.jsx';
-import Testimonials from './general-components/Testimonials.jsx';
+import Header from './common/Header.jsx';
+import Startup42 from './common/Startup42.jsx';
+import Details from './common/Details.jsx';
+import ActionRepeat from './common/ActionRepeat.jsx';
+import Testimonials from './common/Testimonials.jsx';
 
 FlowRouter.route("/", {
   action() {
