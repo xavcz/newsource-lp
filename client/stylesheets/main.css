@@ -83,7 +83,7 @@ nav {
     line-height: 1.10;
     color: #393939; }
 .section__hero .btn {
-    width: 20rem;
+    width: 100%;
     margin-top: 1.5rem; }
 .section__hero .card {
     padding: 1.5rem;
