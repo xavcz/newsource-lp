@@ -7,14 +7,14 @@ export default class Report extends React.Component {
 			<form className="card z-depth-3" id="form-report" onSubmit={this.props.onSubmit}>
 				<div className="row">
 					<div className="input-field | col s12">
-						<textarea id="currentStatus" type="text" ref="currentStatus" placeholder="50 utilisateurs actifs par jour, 200€ de CA par semaine, etc." className="materialize-textarea validate"/>
-						<label htmlFor="currentStatus" className="active">La metric clef que tu traques maintenant</label>
+						<textarea id="context" type="text" ref="context" placeholder="Marketplace sportive, réseau social géolocalisé, etc." className="materialize-textarea validate"/>
+						<label htmlFor="context" className="active">Le contexte de ton projet</label>
 					</div>
 				</div>
 				<div className="row">
 					<div className="input-field | col s12">
-						<textarea id="context" type="text" ref="context" placeholder="Marketplace sportive, réseau social géolocalisé, etc." className="materialize-textarea validate"/>
-						<label htmlFor="context" className="active">Le contexte de ton projet</label>
+						<textarea id="currentStatus" type="text" ref="currentStatus" placeholder="50 utilisateurs actifs par jour, 200€ de CA par semaine, etc." className="materialize-textarea validate"/>
+						<label htmlFor="currentStatus" className="active">La metric clef que tu traques maintenant</label>
 					</div>
 				</div>
 				<div className="row">

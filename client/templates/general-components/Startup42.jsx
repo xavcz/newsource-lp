@@ -5,9 +5,9 @@ export default class Startup42 extends React.Component {
 		return (
 			<div id="why" className="container">
 				<div id="because-I-do-everything" className="section section__bigflow center-align">
-					<h2 className="center">Avec la contribution et l'expertise de l'accélérateur</h2>
+					<h1 className="center text-secondary-color">Nos partenaires</h1>
+					<h3 className="center">Avec la contribution et l'expertise de</h3>
 					<img src="/img/logo_startup42-fond_clair.png" height="70%" width="70%"/>
-					<p>@Maxime: texte pour expliquer l'utilisation de la méthode + qui est Startup42 ?</p>
 				</div>
 			</div>
 		);

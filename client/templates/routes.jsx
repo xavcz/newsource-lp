@@ -19,7 +19,6 @@ FlowRouter.route("/", {
           <Details />
           <Testimonials />
           <Startup42 />
-          <h1 className="center title-form">Où es-tu dans ton projet ?<br/> Nous t'apportons une solution !</h1>
           <ActionRepeat />
         </div>
       )

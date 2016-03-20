@@ -45,6 +45,8 @@ nav {
     #Section META
 \*------------------------------------*/
 .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     /*
      * Don't touch .flow-text because
      * it has special properties defined by
@@ -107,14 +109,34 @@ nav {
 .section__bigflow {
     margin-top: 2rem;
     margin-bottom: 2rem; }
+.section__bigflow h3 {
+    color: #212121; }
+.section__bigflow h5 {
+    line-height: 2.3rem; }
+.section__bigflow h5 span {
+    border-bottom: 2px solid white; }
+.section__bigflow h1 {
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 1.10;
+    color: #F44336; }
 
 /*------------------------------------*\
     #More (Grid) Section
 \*------------------------------------*/
 .section__more-grid i {
     color: #9e9e9e; }
-.section__more-grid h2 {
-    margin: 3rem 0 2rem; }
+.section__more-grid h3 {
+    color: #212121; }
+.section__more-grid h5 {
+    line-height: 2.3rem; }
+.section__more-grid h5 span {
+    border-bottom: 2px solid white; }
+.section__more-grid h1 {
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 1.10;
+    color: #F44336; }
 
 /*------------------------------------*\
     #Pricing Section
@@ -204,6 +226,18 @@ nav {
 .page-footer a span {
     color: #9e9e9e; }
 
+.section__footer h3 {
+    color: #212121; }
+.section__footer h5 {
+    line-height: 2.3rem; }
+.section__footer h5 span {
+    border-bottom: 2px solid white; }
+.section__footer h1 {
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 1.10;
+    color: #F44336; }
+
 @media (max-width: 993px) {
     .page-footer h5 {
         margin-top: 2.5rem; } }
@@ -262,14 +296,28 @@ nav {
     color: white;
 }
 
-.section__more-grid img {
+.section__more-grid img.down{
+    margin: 0 0 1em;
+}
+
+.section__more-grid img{
+    margin: 1em 0;
+}
+
+.section__more-grid img.icon {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     border-radius: 50px;
     padding: 10px;
 }
 
-h1.title-form {
+.icon-block {
+    text-align: center;
+}
+
+.title-form h3 {
+    color: #212121; }
+.title-form h1 {
     font-weight: bold;
     font-size: 4.2rem;
     line-height: 1.10;
-}
+    color: #F44336; }
