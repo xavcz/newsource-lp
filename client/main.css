@@ -83,6 +83,9 @@ nav {
 .section__hero .btn {
     width: 20rem;
     margin-top: 1.5rem; }
+.section__hero form.card {
+    padding: 1.5rem;
+    border: 0.35rem solid #26a69a; }
 .section__hero .gorilla {
     display: inline-block;
     height: 330px;
