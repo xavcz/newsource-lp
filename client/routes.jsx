@@ -16,8 +16,8 @@ FlowRouter.route("/", {
       content: (
         <div>
           <Header />
-          <Testimonials />
           <Details />
+          <Testimonials />
           <Startup42 />
           <ActionRepeat />
         </div>

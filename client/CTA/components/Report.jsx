@@ -5,28 +5,34 @@ export default class Report extends React.Component {
 	render () {
 		return (
 			<form className="card z-depth-3" id="form-report" onSubmit={this.props.onSubmit}>
+				<h4 className="center">État actuel de ta startup</h4>
 				<div className="row">
-					<h4 className="center">Où es-tu dans ton projet ? Nous t'apportons une solution !</h4>
-					<div className="input-field | col s12">
-						<input id="currentStatus" type="text" ref="currentStatus" placeholder="50 utilisateurs actifs par jour, 200€ de CA par semaine, etc." />
-						<label htmlFor="currentStatus">Metric clef que tu traques maintenant</label>
+					<div className="form-group | col s12">
+						<div className="input-field input-success">
+							<label className="control-label active">Où en est la metric qui définit ton succès ?</label>
+							<input id="currentStatus" type="text" ref="currentStatus" placeholder="50 utilisateurs actifs par jour, 200€ de CA par semaine, etc." />
+						</div>
 					</div>
 				</div>
 				<div className="row">
-					<div className="input-field | col s12">
-						<input id="context" type="text" ref="context" placeholder="Marketplace sportive, réseau social géolocalisé, etc." />
-						<label htmlFor="context">Contexte de ton projet</label>
+					<div className="form-group | col s12">
+						<div className="input-field input-success">
+							<label className="control-label active">Quel est le contexte de ton projet ?</label>
+							<input id="context" type="text" ref="context" placeholder="Marketplace sportive, réseau social géolocalisé, etc." />
+						</div>
 					</div>
 				</div>
 				<div className="row">
-					<div className="input-field | col s12">
-						<input id="problem" type="text" ref="problem" placeholder="Comment savoir qui sont mes utilisateurs ? Comment générer plus de revenus ? Etc. ?" />
-						<label htmlFor="problem">Le problème d'action que tu veux résoudre cette semaine</label>
+					<div className="form-group | col s12">
+						<div className="input-field input-success">
+							<label className="control-label active">Quel est le problème d'action que tu veux résoudre cette semaine ?</label>
+							<input id="context" type="text" ref="context" placeholder="Comment savoir qui sont mes utilisateurs ? Comment générer plus de revenus ? Etc. ?" />
+						</div>
 					</div>
 				</div>
 				<div className="row">
-					<div className="col s12">
-						<button className="btn btn-large" type="submit" id="send_mail">Submit</button>
+					<div className="col s12 center-align">
+						<button className="btn btn-large" type="submit" id="send_mail">Passe à l'Action</button>
 					</div>
 				</div>
 			</form>
