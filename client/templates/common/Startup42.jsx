@@ -11,7 +11,7 @@ export default class Startup42 extends React.Component {
 					<blockquote className="flow-text">
 						<p>En trois ans d'accélération de startups early-stage, Startup42 a développé une méthodologie qui permet aux entrepreneurs d'acquérir les bons reflexes en quelques semaines.</p>
 						<p>Quelles questions se poser au bon moment ? Dans quelles ressource piocher les réponses ? A qui aller parler ?</p>
-						<p>Ce sont des milliers de conseils de mentors que nous avons réunis et Newsource.io permet à tous d'enfin y accéder !</p>
+						<p>Ce sont des milliers de conseils de mentors que nous avons réunis et NewSource.io permet à tous d'enfin y accéder !</p>
 					</blockquote>
 					<p>— Maxime Pico, Managing Director de Startup42</p>
 				</div>
