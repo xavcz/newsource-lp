@@ -14,7 +14,7 @@ export default HeadTags = () => {
 				// facebook
 				{property: "og:type", content: "website"},
 				{property: "og:url", content: Meteor.absoluteUrl()},
-				{property: "og:image", content: '/img/QA.jpg'},
+				{property: "og:image", content: `${Meteor.absoluteUrl()}img/QA.jpg`},
 				{property: "og:title", content: 'NewSource'},
 				{property: "og:description", content: "Service en ligne destiné à des startupers early-stage pour les pousser à l'action grâce à une prise de recul sur l'état d'avancement de leur projet."},
 				//twitter
@@ -25,7 +25,7 @@ export default HeadTags = () => {
 			]}
 			link={[
 				{rel: "canonical", href: Meteor.absoluteUrl()},
-				{rel: "shortcut icon", href: `${Meteor.absoluteUrl()}/favicon.ico`}
+				{rel: "shortcut icon", href: `${Meteor.absoluteUrl()}favicon.ico`}
 			]}
 		/>
 	);
