@@ -1,1 +1,5 @@
 .idea/*
+
+.deploy-mupx/mup.json
+
+.deploy-mupx/settings.json
