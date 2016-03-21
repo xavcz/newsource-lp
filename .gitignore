@@ -5,3 +5,7 @@
 .deploy-mupx/mup.json
 
 .deploy-mupx/settings.json
+
+.deploy/settings.json
+
+.deploy/mup.json
