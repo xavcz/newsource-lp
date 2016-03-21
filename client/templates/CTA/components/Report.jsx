@@ -25,7 +25,7 @@ export default class Report extends React.Component {
 				</div>
 				<div className="row">
 					<div className="col s12 center-align">
-						<button className="btn btn-large" type="submit" id="report">Action !</button>
+						<button className="btn btn-large" type="submit" id="report">{this.props.button}</button>
 					</div>
 				</div>
 			</form>

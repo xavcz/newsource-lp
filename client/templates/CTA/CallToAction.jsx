@@ -82,7 +82,7 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		return (
 			<div>
 				{data.get('step') === 1 ?
-					<Report onSubmit={this.submitReport} /*errors={this.state.errors}*/ />
+					<Report onSubmit={this.submitReport} button={this.props.button} /*errors={this.state.errors}*/ />
 					: data.get('step') === 2 ?
 						<Email onSubmit={this.submitEmail} oauth={this.oAuth} />
 						: <Thanks />

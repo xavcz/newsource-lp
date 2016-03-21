@@ -29,6 +29,10 @@
 /*------------------------------------*\
     #NAV
 \*------------------------------------*/
+html {
+    letter-spacing: 0.6px;
+}
+
 nav {
     background-color: #26a69a;
     font-weight: 500; }
@@ -70,7 +74,12 @@ nav {
     padding-top: 3%;
     padding-bottom: 5%;
     position: relative;
-    background-color: #DD5A2B; }
+    background: hsla(4,90%,58%,1) 0%;
+    background: -moz-linear-gradient(top,  hsla(4,90%,58%,1) 0%, hsla(0,65%,51%,1) 44%, hsla(0,63%,37%,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  hsla(4,90%,58%,1) 0%,hsla(0,65%,51%,1) 44%,hsla(0,63%,37%,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  hsla(4,90%,58%,1) 0%,hsla(0,65%,51%,1) 44%,hsla(0,63%,37%,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44336', endColorstr='#9b2323',GradientType=0 ); /* IE6-9 */
+}
 .section__hero h3 {
     color: white; }
 .section__hero h5 {

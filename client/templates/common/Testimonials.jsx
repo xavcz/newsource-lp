@@ -6,8 +6,8 @@ export default class Testimonials extends React.Component {
 			<div className="section section__footer">
 				<div className="container valign">
 					<div className="row">
-						<h1 className="center text-secondary-color">Nos témoignages</h1>
-						<h3 className="center">Startupers ayant appliqué cette méthode</h3>
+						<h1 className="center text-secondary-color">Ils sont devenus des super-héros...</h1>
+						<h3 className="center">...ils témoignent</h3>
 						<div className="col s12 m12 l4">
 							<div className="icon-block center">
 								<h5 className="primary-text-color flow-text">"On ne vient pas chercher des réponses… On vient savoir comment tacler notre problème."</h5>
