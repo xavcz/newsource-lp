@@ -313,9 +313,13 @@ nav {
     margin: 1em 0;
 }
 
-.section__more-grid img.icon {
+.section__more-grid img.icon,
+.section__more-grid img.unicorn {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 50px;
+    border-radius: 50%;
+}
+
+.section__more-grid img.icon {
     padding: 10px;
 }
 
