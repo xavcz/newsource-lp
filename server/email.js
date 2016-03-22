@@ -10,5 +10,8 @@ Accounts.onCreateUser(function(options, user) {
 		subject: '[Landing Page] Nouveau problème',
 		text: `User: ${user.emails[0].address}\n\nContexte:\n${context}\n\nMetric:\n${metric}\n\nProblème:\n${problem}`
 	});
+
+	user.profile = options.profile;
+
 	return user;
 });
