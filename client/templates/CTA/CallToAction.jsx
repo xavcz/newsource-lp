@@ -27,15 +27,15 @@ export default class CallToAction extends TrackerReact(React.Component) {
 		event.preventDefault();
 
 		const report = {
-			currentStatus: event.currentTarget[0].value.trim(),
 			context: event.currentTarget[0].value.trim(),
-		 	problem: event.currentTarget[0].value.trim()
+			metric: event.currentTarget[1].value.trim(),
+			problem: event.currentTarget[2].value.trim()
 		};
 
 		analytics.track("Submit report", report);
 
 		// UI step change
-		data.set('step', 2);
+		//data.set('step', 2);
 
 		Meteor.call('Reports.methods.createReport', report, (err, res) => {
 			if (err) {
@@ -46,11 +46,12 @@ export default class CallToAction extends TrackerReact(React.Component) {
 					event: "Submit report"
 				});
 
-				throw new Meteor.Error(error);
+				throw new Meteor.Error(err);
 			}
 
 			_.extend(report, {_id: res});
 			data.set('report', report);
+			data.set('step', 2);
 		});
 	}
 
@@ -84,7 +85,7 @@ export default class CallToAction extends TrackerReact(React.Component) {
 				{data.get('step') === 1 ?
 					<Report onSubmit={this.submitReport} button={this.props.button} /*errors={this.state.errors}*/ />
 					: data.get('step') === 2 ?
-						<Email onSubmit={this.submitEmail} oauth={this.oAuth} />
+						<Email onSubmit={this.submitEmail} />
 						: <Thanks />
 				}
 			</div>
