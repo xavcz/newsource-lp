@@ -12,6 +12,7 @@ export default HeadTags = () => {
 				{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"},
 				{name: "description", content: "Service en ligne destiné à des startupers early-stage pour les pousser à l'action grâce à une prise de recul sur l'état d'avancement de leur projet."},
 				// facebook
+				{property: "fb:app_id", content: "502930153216516"},
 				{property: "og:type", content: "website"},
 				{property: "og:url", content: Meteor.absoluteUrl()},
 				{property: "og:image", content: `${Meteor.absoluteUrl()}img/QA.jpg`},

@@ -25,7 +25,6 @@ ddp-common@1.2.3-rc.2
 ddp-rate-limiter@1.0.2-rc.2
 ddp-server@1.2.4-rc.2
 deps@1.0.10-rc.2
-dfischer:prerenderio@1.0.7
 diff-sequence@1.0.3-rc.2
 ecmascript@0.4.1-rc.2
 ecmascript-runtime@0.2.8-rc.2
