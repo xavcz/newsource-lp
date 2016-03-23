@@ -14,12 +14,9 @@ FlowRouter.route("/", {
   action() {
     mount(Layout, {
       content: (
-        <div>
+        <div style={{height: '100vh'}}>
           <Header />
-          <Details />
-          <Testimonials />
           <Startup42 />
-          <ActionRepeat />
         </div>
       )
     });
