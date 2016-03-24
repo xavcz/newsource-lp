@@ -26,7 +26,7 @@ export default class Header extends React.Component {
 						</div>
 					</div>
 					<div className="row">
-						<div className="col s4 offset-s4">
+						<div className="col s10 offset-s1 m6 offset-m3 center">
 							<a className="btn btn-large waves-effect waves-light" ref="CTA" href="https://newsource.typeform.com/to/dvFv0H" onClick={this.redirectTypeform}>{text}</a>
 						</div>
 					</div>

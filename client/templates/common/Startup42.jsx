@@ -17,7 +17,7 @@ export default class Startup42 extends React.Component {
 			<div id="why" className="container">
 				<div className="section section__bigflow center-align">
 					<div className="row">
-						<h1 className="center text-secondary-color">Avec la contribution et l'expertise de</h1>
+						<h3 className="center">Avec la contribution et l'expertise de</h3>
 						<img src="/img/logo_startup42-fond_clair.png" height="70%" width="70%"/>
 						<blockquote className="flow-text">
 							<p>En trois ans d'accélération de startups early-stage, Startup42 a développé une méthodologie qui permet aux entrepreneurs d'acquérir les bons réflexes en quelques semaines.</p>
@@ -27,7 +27,7 @@ export default class Startup42 extends React.Component {
 						<p>— Maxime Pico, Managing Director de Startup42</p>
 					</div>
 					<div className="row">
-						<div className="col s4 offset-s4">
+						<div className="col s10 offset-s1 m6 offset-m3">
 							<a className="btn btn-large waves-effect waves-light" href="https://newsource.typeform.com/to/dvFv0H" ref="CTA" onClick={this.redirectTypeform}>{text}</a>
 						</div>
 					</div>
